@@ -1,3 +1,25 @@
 body {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    background-color: red;
+}
+#id{
+    background-color: white;
+}
+.upper{
+    background-color: blueviolet
+}
+.photo{
+    background-color: pink;
+}
+.personalInfo{
+    background-color: greenyellow;
+}
+.personalData{
+    background-color: purple;
+}
+.socialMedia{
+    background-color: black;
+}
+.lower{
+    background-color: orange;
 }
