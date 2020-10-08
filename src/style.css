@@ -4,9 +4,17 @@ body {
 }
 #id{
     background-color: white;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
 }
 .upper{
-    background-color: blueviolet
+    background-color: blueviolet;
+    display:flex;
+    height: 250px;
+    width: 250;
+
 }
 .photo{
     background-color: pink;
@@ -18,7 +26,7 @@ body {
     background-color: purple;
 }
 .socialMedia{
-    background-color: black;
+    background-color: grey;
 }
 .lower{
     background-color: orange;
