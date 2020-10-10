@@ -39,11 +39,15 @@ let cvTibi= document.querySelector("#cv");
 //el div de arriba completo (mas grande)
 let personalInfo= document.createElement("div")
 personalInfo.className = "media"
+
 // la foto
 let photo= document.createElement("img")
 photo.src= data.photo
-photo.className = "mr-3"
+photo.className = "mr-3 rounded-circle"
+photo.style.width = "250px"
+photo.style.height = "250px"
 personalInfo.appendChild(photo)
+
 // el div de la derecha, con todo el texto
 let textContainer= document.createElement("div") 
 textContainer.className = "media-body"
@@ -58,25 +62,40 @@ let profesion= document.createElement("p")
 profesion.innerHTML= data.role
 textContainer.appendChild(profesion)
 
-let socialMediaLinkedin= document.createElement("i")
-socialMediaLinkedin.innerHTML= data.linkedin
-socialMediaLinkedin.className= "fab fa-linkedin"
-textContainer.appendChild(socialMediaLinkedin)
+let socialMediaClass = ["fab fa-linkedin", "fab fa-github", "fas fa-envelope", "fab fa-whatsapp"];
+let nameSocial = ["linkedin", "github", "mail", "whatsapp"];
+ //1. Hacer un array con las redes sociales
+ //2. Hacer un array con los iconos 
+ //3. Crear un tag en HTML <i>
+ //4. Añadirle a ese tag la clase ( array socialMediaClass )
+ //5. Añadirle al div text container
+ //6. Hacer que se repita por cada red social 
+// REFACTORIZAR (reducir y optimizar código + mejorar una solución que ya funciona)
+// Optimizar no es lo mismo que mejorar 
+// ¿Se cuantas veces se repite?. Sí, entonces uso un for!! aquí se que se va a repetir 4 veces
+for(let i=0;i<4;i++){
+    let socialMediaTag= document.createElement("i")
+    socialMediaTag.innerHTML= data[nameSocial[i]] //
+    socialMediaTag.className= socialMediaClass[i]
+    textContainer.appendChild(socialMediaTag)
+}
 
-let socialMediaGit= document.createElement("i")
-socialMediaGit.innerHTML= data.linkedin
-socialMediaGit.className="fab fa-github"
-textContainer.appendChild(socialMediaGit)
 
-let socialMediaMail= document.createElement("i")
-socialMediaMail.innerHTML= data.mail
-socialMediaMail.className="fas fa-envelope"
-textContainer.appendChild("socialMediaMail")
 
-let whatsapp= document.createElement("i")
-whatsapp.innerHTML= data.whatsapp
-whatsapp.className="fab fa-whatsapp"
-textContainer.appendChild("whatsapp")
+// let socialMediaGit= document.createElement("i")
+// socialMediaGit.innerHTML= data.linkedin
+// socialMediaGit.className="fab fa-github"
+// textContainer.appendChild(socialMediaGit)
+
+// let socialMediaMail= document.createElement("i")
+// socialMediaMail.innerHTML= data.mail
+// socialMediaMail.className="fas fa-envelope"
+// textContainer.appendChild(socialMediaMail)
+
+// let whatsapp= document.createElement("i")
+// whatsapp.innerHTML= data.whatsapp
+// whatsapp.className="fab fa-whatsapp"
+// textContainer.appendChild(whatsapp)
 
 cvTibi.appendChild(personalInfo)
 
