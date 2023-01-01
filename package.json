@@ -21,10 +21,10 @@
   "homepage": "https://github.com/unocongafas/4ga-webpack#readme",
   "devDependencies": {
     "css-loader": "^4.3.0",
-    "html-webpack-plugin": "^4.5.0",
+    "html-webpack-plugin": "^5.5.0",
     "style-loader": "^1.2.1",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
